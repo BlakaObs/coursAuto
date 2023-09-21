@@ -11,5 +11,7 @@ jobs:
       - uses: php-actions/composer@v6 # or alternative dependency management
       - uses: php-actions/phpunit@v3
           with:
+            version: "9.5"
+            php_version: "8.0.1"
             php_extensions: "GD"
     # ... then your own project steps ...
