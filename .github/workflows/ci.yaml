@@ -15,4 +15,14 @@ jobs:
           php_version: "8.1.0"
           php_extensions: GD xdebug
           coverage_cobertura: "coverage.xml"
+
+      - name: Code coverage Report
+        - uses: irongut/CodeCoverageSummary@v1.3.0
+            with:
+              filename: ./coverage.cobertura.xml
+
+      - name: Adding markdown
+          run: |
+            echo "## Coverage" >> README.md
+            echo "![coverage](./coverage.svg)" >> README.md
     # ... then your own project steps ...
