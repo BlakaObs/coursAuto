@@ -13,6 +13,6 @@ jobs:
         with:
           version: "9.5"
           php_version: "8.1.0"
-          php_extensions: "GD", "xdebug"
+          php_extensions: GD xdebug
           coverage_cobertura: "coverage.xml"
     # ... then your own project steps ...
