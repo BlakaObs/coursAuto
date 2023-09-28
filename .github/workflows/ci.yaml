@@ -15,8 +15,9 @@ jobs:
           php_version: "8.1.0"
           php_extensions: GD xdebug
           coverage_cobertura: "coverage.xml"
-      - name: Adding markdown
-          run: |
-            echo "## Coverage" >> README.md
-            echo "![coverage](./coverage.svg)" >> README.md
+
+            - name: Adding markdown
+              run: | 
+                  echo "## Coverage" >> README.md
+                  echo "![coverage](./coverage.svg)" >> README.md
     # ... then your own project steps ...
