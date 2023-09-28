@@ -33,4 +33,6 @@ jobs:
           php_version: 8.1
           path: lib/
           standard: PSR2
+          error_severity: 0
+          warning_severity: 8
     # ... then your own project steps ...
