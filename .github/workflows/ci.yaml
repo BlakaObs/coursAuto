@@ -16,7 +16,7 @@ jobs:
         with:
           version: "9.5"
           php_version: "8.1.0"
-          php_extensions: GD xdebug
+          php_extensions: GD xdebug cs
           coverage_cobertura: "./coverage/coverage.xml"
         env:
           XDEBUG_MODE: "coverage"
