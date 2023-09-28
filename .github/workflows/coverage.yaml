@@ -12,8 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies # Here we install dependencies with Composer
-        run: composer install
       - name: Run tests # Here we run PHPUnit
         - run: vendor/bin/phpunit --coverage-clover=coverage.xml
           - name: Adding markdown
