@@ -29,8 +29,8 @@ jobs:
 
       - name: Code Sniffer
         uses: php-actions/phpcs@v1
-          with:
-            php_version: 8.1
-            path: src/
-            standard: phpcs.xml
+        with:
+          php_version: 8.1
+          path: src/
+          standard: phpcs.xml
     # ... then your own project steps ...
