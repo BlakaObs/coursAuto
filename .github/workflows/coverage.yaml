@@ -1,21 +1,22 @@
 name: coverage
 
-  on:
-    push:
-      branches: [ master ]
-    pull_request:
-      branches: [ master ]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
-  jobs:
-    coverage:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: Install dependencies # Here we install dependencies with Composer
-          run: composer install
-        - name: Run tests # Here we run PHPUnit
-          - run: vendor/bin/phpunit --coverage-clover=coverage.xml
-            - name: Adding markdown
-              run: | 
-                  echo "## Coverage" >> README.md
-                  echo "![coverage](./coverage.svg)" >> README.md
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies # Here we install dependencies with Composer
+        run: composer install
+      - name: Run tests # Here we run PHPUnit
+        - run: vendor/bin/phpunit --coverage-clover=coverage.xml
+          - name: Adding markdown
+            run: | 
+              echo "## Coverage" >> README.md
+              echo "![coverage](./coverage.svg)" >> README.md
