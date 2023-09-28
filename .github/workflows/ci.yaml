@@ -16,7 +16,7 @@ jobs:
         with:
           version: "9.5"
           php_version: "8.1.0"
-          php_extensions: GD xdebug cs
+          php_extensions: GD xdebug
           coverage_cobertura: "./coverage/coverage.xml"
         env:
           XDEBUG_MODE: "coverage"
@@ -32,5 +32,5 @@ jobs:
         with:
           php_version: 8.1
           path: lib/
-          standard: phpcs.xml
+          standard: PSR2
     # ... then your own project steps ...
