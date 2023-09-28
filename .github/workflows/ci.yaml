@@ -28,6 +28,6 @@ jobs:
       - name: Adding markdown
         run: | 
             echo "## Coverage" >> README.md
-            echo "![coverage](./coverage.svg)" >> README.md
+            echo "![coverage](./coverage/coverage.xml)" >> README.md
 
     # ... then your own project steps ...
