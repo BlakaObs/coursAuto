@@ -35,4 +35,12 @@ jobs:
           standard: PSR2
           error_severity: 0
           warning_severity: 8
+      
+      
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.SuperSecret }}
+        run: |
+          git pull
+
     # ... then your own project steps ...
